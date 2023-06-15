@@ -163,9 +163,7 @@ class AutoMLStep(ConfigurableRetryStep):
                 "SAGEMAKER_INFERENCE_SUPPORTED": inference_container_environment[
                     "SAGEMAKER_INFERENCE_SUPPORTED"
                 ],
-                "SAGEMAKER_INFERENCE_OUTPUT": inference_container_environment[
-                    "SAGEMAKER_INFERENCE_OUTPUT"
-                ],
+                "SAGEMAKER_INFERENCE_OUTPUT": "predicted_label, probability",
                 "SAGEMAKER_PROGRAM": inference_container_environment["SAGEMAKER_PROGRAM"],
             },
             sagemaker_session=sagemaker_session,
